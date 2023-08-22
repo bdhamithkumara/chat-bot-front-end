@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { useTheme } from 'next-themes'
 import { FaSun, FaRegMoon } from "react-icons/fa";
@@ -9,10 +10,9 @@ const Navbar = () => {
 
 
     return (
-        <>
-            <nav className=" fixed w-full z-20 top-0 left-0 border-b border-gray-200 ">
+            <nav className="w-full top-0 left-0 border-b border-gray-200 ">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap ">Flowbite</span>
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap ">DKBoT</span>
                     <div className='flex'>
                         <button className="block border-2 border-black  rounded " onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
                             {theme === "dark" ? <FaSun className='m-2' /> : <FaRegMoon className='m-2' />}
@@ -23,7 +23,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-        </>
+       
     )
 }
 
